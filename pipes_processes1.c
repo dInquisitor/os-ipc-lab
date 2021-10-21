@@ -47,8 +47,7 @@ int main()
     else if (p > 0) 
     { 
   
-        close(fd1[0]);  // Close reading end of pipes 
-//         close(fd2[0]);
+        close(fd1[0]);  // Close reading end of pipe
   
         // Write input string and close writing end of first 
         // pipe. 
@@ -59,7 +58,6 @@ int main()
         wait(NULL);
         
         close(fd2[1]); // Close writing end of second pipe
-//         close(fd1[1]); 
       
         // Read string from second pipe
         char concat_str2[100]; 
@@ -85,8 +83,7 @@ int main()
     // child process 
     else
     { 
-        close(fd1[1]);  // Close writing end of first pipes 
-//         close(fd2[1]); 
+        close(fd1[1]);  // Close writing end of first pipe
       
         // Read a string using first pipe 
         char concat_str[100]; 
